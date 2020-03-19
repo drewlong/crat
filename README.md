@@ -1,6 +1,8 @@
 # CRA Templator
 ![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
 ![GitHub license](https://img.shields.io/github/license/drewlong/crat)
+![GitHub release](https://img.shields.io/github/v/release/drewlong/crat?include_prereleases)
+![Travis-CI Build](https://travis-ci.com/drewlong/crat.svg?branch=master)
 ____
 
 CRAT is a dead-simple way to jumpstart projects, using CRA and a little bit of Ruby
