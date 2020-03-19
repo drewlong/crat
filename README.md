@@ -29,7 +29,7 @@ available template folders in `~/.crat/templates/`. When you create a new templa
 
 Example output of `crat -l`:
 
-
+![list](https://user-images.githubusercontent.com/20236454/77111582-f8cc4380-69fd-11ea-9133-8f10bf980cff.png)
 
 #### Creating a Template
 
