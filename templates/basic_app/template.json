@@ -1,0 +1,19 @@
+{
+  "name": "Basic App",
+  "description": "Example Template for CRAT",
+  "options": {
+    "dependencies": {
+      "axios": "latest",
+      "moment": "latest",
+      "react-router": "latest",
+      "react-router-dom": "latest",
+      "universal-cookie": "latest"
+    },
+    "folders": [
+      {"path": "src/css"},
+      {"path": "src/img"},
+      {"path": "src/layout/home"},
+      {"path": "src/layout/global"}
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'colorize'
+require 'optparse'
+require_relative "./crat.rb"
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = %(
+Basic usage:          crat -n [project name] -t [template name]
+List All Templates:   crat -l
+Create New Template:  crat -c
+  )
+  options[:banner] = opts.banner
+
+  opts.on('-nNAME', '--name=NAME', 'Project name') do |n|
+    options[:name] = n
+  end
+
+  opts.on('-l', 'List available templates') do |l|
+    options[:list] = l
+  end
+
+  opts.on('-tTEMP', '--template=TEMP', 'Template slug') do |t|
+    options[:template] = t
+  end
+
+  opts.on('-c', '--create', 'Initiliaze new template in template dir') do |t|
+    options[:create] = t
+  end
+end.parse!
+
+errors = []
+
+if options[:list].nil?
+  if options[:create].nil?
+    begin
+      name = options[:name]
+      check = name[0]
+    rescue StandardError => e
+      errors << 'Missing project name'
+    end
+    begin
+      temp = options[:template]
+      check = temp[0]
+    rescue StandardError => e
+      errors << 'Missing template name'
+    end
+  end
+  unless errors.empty?
+    puts options[:banner]
+    errors.each { |e| puts e.yellow }
+    abort
+  end
+end
+
+if options[:list]
+  template = Crat::Template.new('')
+  template.list_all
+elsif options[:create]
+  template = Crat::Template.new('')
+  template.create
+else
+  project = Crat::Project.new(name, temp)
+  project.create
+end
