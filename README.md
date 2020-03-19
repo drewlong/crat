@@ -57,6 +57,10 @@ Feel free to get rid of the fields in `dependencies` and `folders` and replace t
 3. **Dependencies**: This is an object holding the dependency names for any additional packages you'd like to include in your project. That is to say, they are in addition to what CRA automatically includes. Accepts the same values as a package.json file.
 4. **Folders**: Create an entry for the last folder in every path you'd like to create. For example, if you want `layouts/` and `layouts/dashboard`, you only need an entry for `layouts/dashboard` because the full path will be created. _Note: the paths should be relative to the project root, not the src directory_
 
+#### Examples
+
+Checkout the `templates` folder for an example template.
+
 #### License
 
 This project is licensed under the MIT License.
