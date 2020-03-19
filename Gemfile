@@ -8,4 +8,4 @@ gem 'colorize'
 
 gem 'json'
 
-# gem "rails"
+gem "rake"
